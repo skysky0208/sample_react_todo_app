@@ -3,7 +3,7 @@ class Api::V1::TodosController < ApplicationController
         render json: {status: 200, todos: Todo.all}
     end
 
-    def create_table
+    def create
         todo = Todo.new(todo_params)
 
         if todo.save
